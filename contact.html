@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Contact form</title>
+    <script defer src="index.js"></script>
+  </head>
+
+  <body>
+    <header class="header-box">
+      <h3>Say Hi :)</h3>
+      <span id="left-line" class="line"></span>
+        <p id="menu-label">menu</p>
+        <span class="line"></span>
+        <nav id="nav-bar">
+          <ul class="menu">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="edu.html"> Academic background</a></li>
+            <li><a href="work.html"> Work experience </a></li>
+            <li><a href="playground.html"> Playground </a></li>
+            <li><a href="cat.html">Beining's cat</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="main-box">
+      <p id="greeting">CONTACT</p>
+
+      <form id="form" method="GET" action="contact.html">
+        <div id="error"></div>
+
+        <h5>
+          Anything you want to say to Beining? Fill out the following form and
+          let's get connected!
+        </h5>
+
+        <div id="main-form">
+          <p>Your name</p>
+          <input
+            class="input-text"
+            type="text"
+            id="your-name"
+            name="yourName"
+            placeholder="Name"
+            required
+          />
+
+          <p>Email</p>
+          <input
+            class="input-text"
+            type="text"
+            id="your-email"
+            name="yourEmail"
+            placeholder="what's your Email?"
+            required
+          />
+          <p>Message</p>
+          <textarea
+            class="input-text"
+            type="text"
+            id="your-message"
+            name="yourMessage"
+            placeholder="Message to Beining..."
+            rows="10"
+            cols="33"
+            required
+          ></textarea>
+
+          <p>Reason</p>
+          <input type="radio" id="work-type" name="contactType" checked />
+          <label for="work-type">Work</label>
+          <input type="radio" id="commercial-type" name="contactType" />
+          <label for="commercial-type">Commercial</label>
+          <input type="radio" id="academic-type" name="contactType" />
+          <label for="academic-type">Academic</label>
+          <input type="radio" id="other-type" name="contactType" />
+          <label for="other-type">Other</label>
+        </div>
+        <div id="submit-button-box">
+          <button type="submit" id="submit-button">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <address>Contact: <a href="mailto:bouyang@bu.edu">Email me</a></address>
+      <p>Copyright 2022. Beining Ouyang. All Rights Reserved.</p>      
+    </footer>
+  </body>
+</html>
