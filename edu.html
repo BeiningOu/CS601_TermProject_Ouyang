@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>Academic background</title>
+    <script src="https://unpkg.com/vue@3"></script>
     <script defer src="edu.js"></script>
   </head>
 
   <body>
     <div class="header-box">
       <header class="header">
-        <h3>Beining's academic background</h3>
+        <h2>Beining's academic background</h2>
         <span id="left-line" class="line"></span>
         <p id="menu-label">menu</p>
         <span class="line"></span>
@@ -29,7 +30,7 @@
       </header>
     </div>
 
-    <main class="outerBox">
+    <main id="eduApp" class="outerBox">
       <div class="eduBox">
         <h4 class="eduHeader">Education</h4>
         <div id="eduMain">
@@ -85,16 +86,23 @@
         </ul>
       </section>
 
-      <figure id="eduCat">
-        <h4>We need to jump out of the box</h4>
-        <img
-          id="jumpcat"
-          src="pictures/IMG_004.png"
-          alt="out of the box"
-          width="50%"
-        />
-      </figure>
+      <p id="out-word">We need to jump out of the box</p>
+      <p id="jump-out-word">Hovering to jump out</p>
+      <img
+        :src="picTrans"
+        @mouseover="mouseover"
+        @mouseleave="mouseleave"
+        alt="out of box"
+        width="200"
+      />
     </main>
+
+    <img
+    id="back-top"
+    class="top-link"
+    src="assets/up-arrow.png"
+    alt="up-arrow"
+  />
 
     <footer>
       <address>Contact: <a href="mailto:bouyang@bu.edu">Email me</a></address>
