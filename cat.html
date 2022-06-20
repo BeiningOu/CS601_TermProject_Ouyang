@@ -4,37 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main.css" />
     <title>Beining's Cat</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <script defer src="cat.js"></script>
   </head>
+
   <body>
     <div class="header-box">
-        <header class="header">
-          <h2>Beining's cat</h2>
-          <span id="left-line" class="line"></span>
-          <p id="menu-label">menu</p>
-          <span class="line"></span>
-          <nav id="nav-bar">
-            <ul class="menu">
-              <li><a href="index.html"> Home </a></li>
-              <li><a href="edu.html"> Academic background</a></li>
-              <li><a href="work.html"> Work experience </a></li>
-              <li><a href="playground.html"> Playground </a></li>
-              <li><a href="cat.html">Beining's cat</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
+      <header class="header">
+        <h2>Beining's cat</h2>
+        <span id="left-line" class="line"></span>
+        <p id="menu-label">menu</p>
+        <span class="line"></span>
+        <nav id="nav-bar">
+          <ul class="menu">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="edu.html"> Academic background</a></li>
+            <li><a href="work.html"> Work experience </a></li>
+            <li><a href="playground.html"> Playground </a></li>
+            <li><a href="cat.html"> Beining's cat</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    <main class="outerBox">
+    <main id="app" class="outerBox">
       <div class="innerBox">
-        <section>
-          <h4>Juliet's picture</h4>
-          <img src="pictures/IMG_002.png" alt="Juliet's picture2" width="200" />
-          <img src="pictures/IMG_003.png" alt="Juliet's picture3" width="215" />
+        <section id = "ju-pic">
+          <h5>Juliet's picture (try hover over me)</h5>
+
+          <img
+            :src="pictureTrans"
+            @mouseover="mouseover"
+            @mouseleave="mouseleave"
+            alt="Juliet's picture2"
+            width="200"
+          />
         </section>
 
-        <article>
+        <article id="best-friend">
           <h4>Best friend</h4>
           <p>
             Juliet is Beining's best friend. She follows Beining everywhere as
@@ -60,13 +69,13 @@
           <p>
             Juliet makes sure Beining gets her work done. Usually, she will sit
             next to her and watch her doing her assignments. Sometimes, She will
-            become a keyboard Cat!
+            become a keyboard cat!
           </p>
         </article>
       </div>
     </main>
 
-    <footer class="footer">
+    <footer>
       <address>Contact: <a href="mailto:bouyang@bu.edu">Email me</a></address>
       <p>Copyright 2022. Beining Ouyang. All Rights Reserved.</p>
     </footer>

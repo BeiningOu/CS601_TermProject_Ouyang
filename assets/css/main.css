@@ -406,6 +406,11 @@ table td {
   text-align: center;
 }
 
+#ju-pic {
+  padding-left: 3%;
+  padding-right: 2%;
+}
+
 .innerBox article {
   flex-basis: 500px;
   margin-left: 50px;
@@ -452,14 +457,28 @@ table td {
   font-weight: normal;
 }
 
+/* #best-friend {
+  margin-left: 10%;
+} */
+
+#best-friend p {
+  text-align: justify;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
 #juliet {
   flex-basis: 400px;
-  margin-left: 80px;
-  margin-right: 20px;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 #juliet h4 {
   text-align: center;
+}
+
+#juliet p {
+  text-align: justify;
 }
 
 /* use variable */
@@ -511,7 +530,7 @@ table td {
       margin-left: 0px;
     }
     #juliet {
-      margin-left: 30px;
+      /* margin-left: 30px; */
       flex-basis: auto;
     }
   }
@@ -536,7 +555,6 @@ table td {
   right: 3%;
   top: 90%;
 }
-
 
 .top-link:hover {
   width: 38px;
