@@ -1,6 +1,7 @@
 # CS601_TermProject_Ouyang
 
-
+The website is hosted at:
+https://thunderous-souffle-e5e9d1.netlify.app
 
 ## About The Project
 
