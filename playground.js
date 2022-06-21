@@ -51,7 +51,7 @@ class Ball {
     ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI); //arc to draw a circle
     ctx.fillStyle = this.color; //set color of the ball
     ctx.fill();
-    console.log(this.x, this.y, this.r);
+    //console.log(this.x, this.y, this.r);
   }
 
   // update method
@@ -98,6 +98,9 @@ for (let i = 0; i < 35; i++) {
   balls.push(createBall());
 }
 
+let ballButton = get("ball-button");
+let gameOn = false;
+
 //loop it and call updateBall
 function animate() {
   //clean the canvas
@@ -106,7 +109,21 @@ function animate() {
     balls[i].updateBall();
     balls[i].drawBall();
   }
-  requestAnimationFrame(animate);
+  if (gameOn == true) {
+    requestAnimationFrame(animate);
+  } else {
+    return false;
+  }
 }
 
-animate();
+// ballButton controls start and Stop
+ballButton.onclick = function () {
+  gameOn = !gameOn;
+  if (gameOn == true) {
+    ballButton.innerHTML = "Stop";
+  } else {
+    ballButton.innerHTML = "Start";
+  }
+  console.log(gameOn);
+  animate();
+};
