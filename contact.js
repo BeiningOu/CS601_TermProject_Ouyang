@@ -32,13 +32,13 @@ function validate(event) {
     messages.push("A minimum length of two characters required in fields");
   }
 
-  let pattern = /^[A-Za-z]+$/;
+  let pattern = /^[A-Za-z]+[\s\S]*[A-Za-z]+$/;
   if (!yourName.value.match(pattern)) {
     messages.push("Only alpha characters are allowed in names");
   }
 
   if (messages.length > 0) {
     event.preventDefault();
-    error.innerText = "Error: " + messages.join("; ") +".";
+    error.innerText = "Error: " + messages.join("; ") + ".";
   }
 }
